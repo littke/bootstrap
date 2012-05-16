@@ -15,6 +15,8 @@
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
   *line-height: @baseLineHeight;
+  //color: @grayDark;
+  color: #686e72;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -26,18 +28,14 @@
   .ie7-restore-left-whitespace(); // Give IE7 some love
   .box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
 
-  // Hover state
-  &:hover {
-    color: @grayDark;
-    text-decoration: none;
-    background-color: darken(@white, 10%);
-    *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
-    background-position: 0 -15px;
+// Hover state
+.btn:hover {
+  color: @grayDark;
+  text-decoration: none;
 
-    // transition is only when going to hover, otherwise the background
-    // behind the gradient (there for IE<=9 fallback) gets mismatched
-    .transition(background-position .1s linear);
-  }
+  background-color: lighten(@btnBackgroundHighlight, 2%); 
+  *background-color: darken(@btnBackgroundHighlight, 5%); /* Buttons in IE7 don't get borders, so darken on hover */
+  background-position: 0 -15px;
 
   // Focus state for keyboard and accessibility
   &:focus {
@@ -47,11 +45,11 @@
   // Active state
   &.active,
   &:active {
-    background-color: darken(@white, 10%);
-    background-color: darken(@white, 15%) e("\9");
-    background-image: none;
-    outline: 0;
-    .box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+      background-color: darken(@btnBackgroundHighlight, 5%);
+      background-color: darken(@btnBackgroundHighlight, 10%) e("\9");
+      background-image: none;
+      outline: 0;
+      .box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
   }
 
   // Disabled state
