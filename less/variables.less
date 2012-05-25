@@ -15,46 +15,53 @@
 @gray:                  #555;
 @grayLight:             #999;
 @grayLighter:           #eee;
-@white:                 #fff;
+@white:                 #ffffff;
+@blueWhite:             #e9f0f4;
+@orangeWhite:           #fff;
+@selectedYellow:        #fff;
 
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
+@blue:                  #147ac9; // main blue
+@backgroundBlue:        #d4e5ee; // background blue
+@blueDark:              #6d88a5; // corporate blue
 @green:                 #46a546;
 @red:                   #9d261d;
 @yellow:                #ffc40d;
-@orange:                #f89406;
+@orange:                #e65c2c; // orange highlight
 @pink:                  #c3325f;
 @purple:                #7a43b6;
-
+@subtleYellow:          #FEF7CD;
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
+@bodyBackground:        @backgroundBlue;
 @textColor:             @grayDark;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             #147ac9;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@sansFontFamily:        "Open Sans Regular", Helvetica, Arial, sans-serif;
+@sansBoldFamily:        "Open Sans Bold", Helvetica, Arial, sans-serif;
+@sansItalicFamily:      "Open Sans Italic", Helvetica, Arial, sans-serif;
+@serifFontFamily:       "Aller Regular", Georgia, "Times New Roman", Times, serif;
+@serifBoldFamily:       "Aller Bold", Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontFamily:    @serifFontFamily; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 // Tables
@@ -66,9 +73,9 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         #bbb;
+@btnBackground:                     #f8fbfd;
+@btnBackgroundHighlight:            #e6edf0;
+@btnBorder:                         #dae1e4;
 
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
@@ -121,17 +128,17 @@
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
 @zindexDropdown:          1000;
-@zindexPopover:           1010;
+@zindexFixedNavbar:       1010;
+@zindexPopover:           1020;
 @zindexTooltip:           1030;
-@zindexFixedNavbar:       1030;
 @zindexModalBackdrop:     1040;
 @zindexModal:             1050;
 
 
 // Sprite icons path
 // -------------------------
-@iconSpritePath:          "../img/glyphicons-halflings.png";
-@iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+@iconSpritePath:          "../../images/icons/glyphicons/glyphicons-halflings.png";
+@iconWhiteSpritePath:     "../../images/icons/glyphicons/glyphicons-halflings-white.png";
 
 
 // Input placeholder text color
@@ -210,19 +217,19 @@
 // -------------------------
 @warningText:             #c09853;
 @warningBackground:       #fcf8e3;
-@warningBorder:           darken(spin(@warningBackground, -10), 3%);
+@warningBorder:           darken(spin(@warningBackground, -10), 22%);
 
 @errorText:               #b94a48;
 @errorBackground:         #f2dede;
-@errorBorder:             darken(spin(@errorBackground, -10), 3%);
+@errorBorder:             darken(spin(@errorBackground, -10), 12%);
 
 @successText:             #468847;
 @successBackground:       #dff0d8;
-@successBorder:           darken(spin(@successBackground, -10), 5%);
+@successBorder:           darken(spin(@successBackground, -10), 20%);
 
 @infoText:                #3a87ad;
 @infoBackground:          #d9edf7;
-@infoBorder:              darken(spin(@infoBackground, -10), 7%);
+@infoBorder:              darken(spin(@infoBackground, -10), 20%);
 
 
 // Tooltips and popovers
